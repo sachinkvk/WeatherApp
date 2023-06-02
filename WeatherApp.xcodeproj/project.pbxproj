@@ -16,6 +16,12 @@
 		5049C9DF2A29BD5800213485 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049C9DE2A29BD5800213485 /* WeatherAppTests.swift */; };
 		5049C9E92A29BD5800213485 /* WeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049C9E82A29BD5800213485 /* WeatherAppUITests.swift */; };
 		5049C9EB2A29BD5800213485 /* WeatherAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5049C9EA2A29BD5800213485 /* WeatherAppUITestsLaunchTests.swift */; };
+		50FB70D92A29FAF30061D108 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FB70D82A29FAF20061D108 /* AppConstants.swift */; };
+		50FB70DF2A29FB6E0061D108 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FB70DA2A29FB6E0061D108 /* ServiceError.swift */; };
+		50FB70E02A29FB6E0061D108 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FB70DB2A29FB6E0061D108 /* WebService.swift */; };
+		50FB70E12A29FB6E0061D108 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FB70DC2A29FB6E0061D108 /* HttpMethod.swift */; };
+		50FB70E22A29FB6E0061D108 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FB70DD2A29FB6E0061D108 /* ApiClient.swift */; };
+		50FB70E32A29FB6E0061D108 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50FB70DE2A29FB6E0061D108 /* ApiRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		5049C9E42A29BD5800213485 /* WeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5049C9E82A29BD5800213485 /* WeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITests.swift; sourceTree = "<group>"; };
 		5049C9EA2A29BD5800213485 /* WeatherAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		50FB70D82A29FAF20061D108 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		50FB70DA2A29FB6E0061D108 /* ServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		50FB70DB2A29FB6E0061D108 /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		50FB70DC2A29FB6E0061D108 /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		50FB70DD2A29FB6E0061D108 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		50FB70DE2A29FB6E0061D108 /* ApiRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50323A062A29FA43004259C7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				50FB70DD2A29FB6E0061D108 /* ApiClient.swift */,
+				50FB70DE2A29FB6E0061D108 /* ApiRequest.swift */,
+				50FB70DC2A29FB6E0061D108 /* HttpMethod.swift */,
+				50FB70DA2A29FB6E0061D108 /* ServiceError.swift */,
+				50FB70DB2A29FB6E0061D108 /* WebService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		5049C9BB2A29BD5600213485 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +125,8 @@
 			children = (
 				5049C9C72A29BD5600213485 /* AppDelegate.swift */,
 				5049C9C92A29BD5600213485 /* SceneDelegate.swift */,
+				50FB70D72A29FAE30061D108 /* Utilities */,
+				50323A062A29FA43004259C7 /* Network */,
 				5049C9CB2A29BD5600213485 /* ViewController.swift */,
 				5049C9CD2A29BD5600213485 /* Main.storyboard */,
 				5049C9D02A29BD5800213485 /* Assets.xcassets */,
@@ -125,6 +151,14 @@
 				5049C9EA2A29BD5800213485 /* WeatherAppUITestsLaunchTests.swift */,
 			);
 			path = WeatherAppUITests;
+			sourceTree = "<group>";
+		};
+		50FB70D72A29FAE30061D108 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				50FB70D82A29FAF20061D108 /* AppConstants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +292,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50FB70E02A29FB6E0061D108 /* WebService.swift in Sources */,
+				50FB70DF2A29FB6E0061D108 /* ServiceError.swift in Sources */,
 				5049C9CC2A29BD5600213485 /* ViewController.swift in Sources */,
+				50FB70E22A29FB6E0061D108 /* ApiClient.swift in Sources */,
+				50FB70E12A29FB6E0061D108 /* HttpMethod.swift in Sources */,
+				50FB70E32A29FB6E0061D108 /* ApiRequest.swift in Sources */,
 				5049C9C82A29BD5600213485 /* AppDelegate.swift in Sources */,
 				5049C9CA2A29BD5600213485 /* SceneDelegate.swift in Sources */,
+				50FB70D92A29FAF30061D108 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
